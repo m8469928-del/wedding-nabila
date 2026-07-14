@@ -1,0 +1,475 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#faf8f3;
+color:#333;
+overflow-x:hidden;
+}
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+url("https://www.transparenttextures.com/patterns/flowers.png");
+opacity:.08;
+pointer-events:none;
+z-index:-1;
+}
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.section h2{
+font-family:'Cormorant Garamond',serif;
+font-size:38px;
+margin-bottom:20px;
+color:#b68b2d;
+}
+
+.section p{
+line-height:1.8;
+font-size:16px;
+}
+
+.arabic{
+font-size:28px;
+line-height:2;
+margin:25px 0;
+}
+
+#loading{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+}
+
+.loader{
+width:60px;
+height:60px;
+border:5px solid #eee;
+border-top:5px solid #c8a24d;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+#cover{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+overflow:hidden;
+z-index:9999;
+}
+
+.cover-image{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.cover-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+.cover-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+width:90%;
+}
+
+.cover-content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:60px;
+margin:20px 0;
+}
+
+.cover-text{
+letter-spacing:3px;
+}
+
+.cover-date{
+margin-bottom:25px;
+}
+
+#openInvitation{
+padding:15px 35px;
+background:#d4af37;
+color:white;
+border:none;
+border-radius:50px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+#openInvitation:hover{
+background:#b68b2d;
+}
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+}
+
+.hero-bg{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-layer{
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+.hero-content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:60px;
+margin:15px 0;
+}
+
+.hero-content h2{
+font-size:26px;
+font-weight:400;
+}
+
+.small-title{
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.couple{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+position:relative;
+background:rgba(255,255,255,.88);
+padding:30px;
+border-radius:28px;
+max-width:330px;
+text-align:center;
+overflow:hidden;
+border:2px solid rgba(212,175,55,.45);
+box-shadow:0 18px 45px rgba(0,0,0,.12);
+backdrop-filter:blur(10px);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card::before{
+content:"❀";
+position:absolute;
+top:12px;
+left:15px;
+font-size:28px;
+color:#d4af37;
+}
+
+.card::after{
+content:"❀";
+position:absolute;
+right:15px;
+bottom:12px;
+font-size:28px;
+color:#d4af37;
+}
+
+.card img{
+display:block;
+width:190px;
+height:190px;
+margin:0 auto 18px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #d4af37;
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+color:#b68b2d;
+margin-bottom:10px;
+}
+
+.heart{
+font-size:42px;
+color:#d4af37;
+}
+
+.countdown{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.countdown div{
+background:#fff;
+padding:20px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.countdown span{
+display:block;
+font-size:34px;
+font-weight:bold;
+color:#b68b2d;
+}
+
+.event-card,
+.gift-card,
+.timeline{
+background:#fff;
+padding:25px;
+margin-top:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.btn-map{
+display:inline-block;
+margin-top:20px;
+padding:14px 28px;
+background:#d4af37;
+color:#fff;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-map:hover{
+background:#b68b2d;
+transform:translateY(-2px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:16px;
+transition:.3s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.story{
+margin-top:30px;
+}
+
+#musicButton{
+position:fixed;
+right:20px;
+bottom:20px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+z-index:999;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+background:#fff;
+margin-top:60px;
+}
+
+footer h3{
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+color:#b68b2d;
+margin:15px 0;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.section h2{
+font-size:30px;
+}
+
+.countdown{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.card{
+max-width:100%;
+}
+
+.card img{
+width:150px;
+height:150px;
+}
+
+}
+/* ORNAMEN BUNGA */
+
+section{
+position:relative;
+overflow:hidden;
+}
+
+section::before{
+content:"❀";
+position:absolute;
+top:20px;
+left:20px;
+font-size:50px;
+color:rgba(212,175,55,.18);
+}
+
+section::after{
+content:"❀";
+position:absolute;
+bottom:20px;
+right:20px;
+font-size:50px;
+color:rgba(212,175,55,.18);
+}
+
+/* FRAME FOTO */
+
+.card img{
+box-shadow:
+0 0 0 8px #fff,
+0 0 0 12px #d4af37,
+0 15px 30px rgba(0,0,0,.18);
+}
+
+/* GALERI */
+
+.gallery img{
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+/* TOMBOL */
+
+.btn{
+background:linear-gradient(45deg,#c89c2c,#e8c45b);
+color:white;
+box-shadow:0 10px 25px rgba(200,156,44,.35);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* JUDUL */
+
+h2{
+position:relative;
+display:inline-block;
+padding-bottom:15px;
+}
+
+h2::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:0;
+transform:translateX(-50%);
+width:80px;
+height:3px;
+background:#d4af37;
+border-radius:5px;
+}
